@@ -1,0 +1,52 @@
+# CLion generated files
+.idea/
+
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+
+# Build directories
+out/
+cmake-build-debug/
+cmake-build-release/
+
+# Generated CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore Visual Studio settings
+.vs/
+
+# Ignore build output
+/bin/
+/obj/
+
+# Ignore NuGet package restore/build artifacts
+/packages/
+
+# Ignore user-specific files
+*.suo
+*.user
+
+# Ignore debugging files
+*.pdb
+*.ipdb
+*.exe
+*.dll
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+*~
