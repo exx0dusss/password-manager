@@ -1,3 +1,8 @@
 C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/Password_Manager.dir
+C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/Encryption.dir
+C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/Pyramid.dir
 C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-build/CMakeFiles/fmt.dir
+C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-build/CMakeFiles/edit_cache.dir
+C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-build/CMakeFiles/rebuild_cache.dir

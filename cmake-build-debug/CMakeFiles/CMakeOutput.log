@@ -440,3 +440,23 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Performing C++ SOURCE FILE Test has_std_20_flag succeeded with the following output:
+Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-q5oun7
+
+Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_09ba7 && [1/2] Building CXX object CMakeFiles/cmTC_09ba7.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_09ba7.exe
+
+
+Source file was:
+int main() { return 0; }
+
+Performing C++ SOURCE FILE Test has_std_2a_flag succeeded with the following output:
+Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xtisfs
+
+Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_678db && [1/2] Building CXX object CMakeFiles/cmTC_678db.dir/src.cxx.obj
+[2/2] Linking CXX executable cmTC_678db.exe
+
+
+Source file was:
+int main() { return 0; }
+
