@@ -11,7 +11,7 @@ FetchContent_MakeAvailable(fmt)
 add_executable(Password_Manager main.cpp)
 target_link_libraries(Password_Manager fmt)
 
-add_executable(Encryption encryption.cpp)
+add_executable(Encryption encryptor.cpp)
 target_link_libraries(Encryption fmt)
 
 add_executable(Pyramid pyramid.cpp)
