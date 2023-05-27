@@ -13,6 +13,3 @@ target_link_libraries(Password_Manager fmt)
 
 add_executable(Encryption encryptor.cpp)
 target_link_libraries(Encryption fmt)
-
-add_executable(Pyramid pyramid.cpp)
-target_link_libraries(Pyramid fmt)

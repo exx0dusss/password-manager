@@ -83,8 +83,8 @@ build Password_Manager.exe: CXX_EXECUTABLE_LINKER__Password_Manager_Debug CMakeF
 
 build cmake_object_order_depends_target_Encryption: phony || cmake_object_order_depends_target_fmt
 
-build CMakeFiles/Encryption.dir/encryption.cpp.obj: CXX_COMPILER__Encryption_Debug C$:/Users/Timur/Documents/GitHub/Password_Manager/encryption.cpp || cmake_object_order_depends_target_Encryption
-  DEP_FILE = CMakeFiles\Encryption.dir\encryption.cpp.obj.d
+build CMakeFiles/Encryption.dir/encryptor.cpp.obj: CXX_COMPILER__Encryption_Debug C$:/Users/Timur/Documents/GitHub/Password_Manager/encryptor.cpp || cmake_object_order_depends_target_Encryption
+  DEP_FILE = CMakeFiles\Encryption.dir\encryptor.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
   INCLUDES = -IC:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-src/include
   OBJECT_DIR = CMakeFiles\Encryption.dir
@@ -98,7 +98,7 @@ build CMakeFiles/Encryption.dir/encryption.cpp.obj: CXX_COMPILER__Encryption_Deb
 #############################################
 # Link the executable Encryption.exe
 
-build Encryption.exe: CXX_EXECUTABLE_LINKER__Encryption_Debug CMakeFiles/Encryption.dir/encryption.cpp.obj | _deps/fmt-build/libfmtd.a || _deps/fmt-build/libfmtd.a
+build Encryption.exe: CXX_EXECUTABLE_LINKER__Encryption_Debug CMakeFiles/Encryption.dir/encryptor.cpp.obj | _deps/fmt-build/libfmtd.a || _deps/fmt-build/libfmtd.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/fmt-build/libfmtd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Encryption.dir
@@ -107,40 +107,6 @@ build Encryption.exe: CXX_EXECUTABLE_LINKER__Encryption_Debug CMakeFiles/Encrypt
   TARGET_FILE = Encryption.exe
   TARGET_IMPLIB = libEncryption.dll.a
   TARGET_PDB = Encryption.exe.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target Pyramid
-
-
-#############################################
-# Order-only phony target for Pyramid
-
-build cmake_object_order_depends_target_Pyramid: phony || cmake_object_order_depends_target_fmt
-
-build CMakeFiles/Pyramid.dir/pyramid.cpp.obj: CXX_COMPILER__Pyramid_Debug C$:/Users/Timur/Documents/GitHub/Password_Manager/pyramid.cpp || cmake_object_order_depends_target_Pyramid
-  DEP_FILE = CMakeFiles\Pyramid.dir\pyramid.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
-  INCLUDES = -IC:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-src/include
-  OBJECT_DIR = CMakeFiles\Pyramid.dir
-  OBJECT_FILE_DIR = CMakeFiles\Pyramid.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Pyramid
-
-
-#############################################
-# Link the executable Pyramid.exe
-
-build Pyramid.exe: CXX_EXECUTABLE_LINKER__Pyramid_Debug CMakeFiles/Pyramid.dir/pyramid.cpp.obj | _deps/fmt-build/libfmtd.a || _deps/fmt-build/libfmtd.a
-  FLAGS = -g
-  LINK_LIBRARIES = _deps/fmt-build/libfmtd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Pyramid.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Pyramid.exe
-  TARGET_IMPLIB = libPyramid.dll.a
-  TARGET_PDB = Pyramid.exe.dbg
 
 
 #############################################
@@ -239,8 +205,6 @@ build Encryption: phony Encryption.exe
 
 build Password_Manager: phony Password_Manager.exe
 
-build Pyramid: phony Pyramid.exe
-
 build fmt: phony _deps/fmt-build/libfmtd.a
 
 build libfmtd.a: phony _deps/fmt-build/libfmtd.a
@@ -253,7 +217,7 @@ build libfmtd.a: phony _deps/fmt-build/libfmtd.a
 #############################################
 # Folder: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug
 
-build all: phony Password_Manager.exe Encryption.exe Pyramid.exe _deps/fmt-build/all
+build all: phony Password_Manager.exe Encryption.exe _deps/fmt-build/all
 
 # =============================================================================
 
