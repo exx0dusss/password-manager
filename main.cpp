@@ -1,12 +1,17 @@
 #include <iostream>
-#include <string>
+#include "Encryptor/encryptor.h"
+#include "Console/console.h"
+#include <fmt/core.h>
+#include <vector>
+#include <algorithm>
 
-int main ()
-{
-  char c = (char)(0x0 + 500);
-  if (c == (char)(0x0 + 500))
-	{
-	  std::cout << 1;
 
-	}
+int main() {
+    new Console();
+//    auto message{"DD LUCHIY AND MACHINA"};
+//    auto encrypted = Encryptor::encrypt(message);
+//    std::cout << "Encrypted: " << encrypted << std::endl;
+//    auto decrypted = Encryptor::decrypt(encrypted);
+//    std::cout << "Decrypted: " << decrypted << std::endl;
+
 }

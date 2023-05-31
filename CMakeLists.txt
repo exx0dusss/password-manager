@@ -8,8 +8,5 @@ FetchContent_Declare(
         GIT_TAG a33701196adfad74917046096bf5a2aa0ab0bb50
 )
 FetchContent_MakeAvailable(fmt)
-add_executable(Password_Manager main.cpp)
+add_executable(Password_Manager Encryptor/encryptor.cpp Encryptor/encryptor.h main.cpp Console/console.cpp Console/console.h Password/password.cpp Password/password.h)
 target_link_libraries(Password_Manager fmt)
-
-add_executable(Encryption encryptor.cpp)
-target_link_libraries(Encryption fmt)
