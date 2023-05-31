@@ -32,12 +32,6 @@ private:
     static bool is_empty(std::ifstream &pFile);
 
 
-    static void clearInput();
-
-    static void print(const std::string &line1 = " ",
-                      const std::string &line2 = " ",
-                      const std::string &line3 = " ");
-
 };
 
 #endif // CONSOLE_H

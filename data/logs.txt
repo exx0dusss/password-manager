@@ -1,0 +1,1 @@
+5/31/2023 16:55:56 - Success! Path: ../Data1.txt
