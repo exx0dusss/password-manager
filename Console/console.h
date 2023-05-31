@@ -34,6 +34,12 @@ class Console {
   static void print (const std::string& line1 = " ",
 					 const std::string& line2 = " ",
 					 const std::string& line3 = " ");
+  static void printConsole (
+	  const std::string& title = " ",
+	  const std::string& line1 = " ",
+	  const std::string& line2 = " ",
+	  const std::string& line3 = " "
+  );
 
 };
 

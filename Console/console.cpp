@@ -12,16 +12,19 @@
 Console::Console ()
 {
   SetConsoleOutputCP (CP_UTF8);
-  std::cout << "╔══════════════════════════════════╗" << std::endl;
-  std::cout << "║ Welcome to the Password Manager! ║" << std::endl;
-  std::cout << "║══════════════════════════════════║" << std::endl;
-  std::cout << "║                                  ║" << std::endl;
-  std::cout << "║       Choose option:             ║" << std::endl;
-  std::cout << "║       1. Open database           ║" << std::endl;
-  std::cout << "║       2. Create database         ║" << std::endl;
-  std::cout << "║       3. Exit                    ║" << std::endl;
-  std::cout << "║                                  ║" << std::endl;
-  std::cout << "╚══════════════════════════════════╝";
+  std::cout << "╔══════════════════════════════════════╗" << std::endl;
+  std::cout << "║    Welcome to the Password Manager!  ║" << std::endl;
+  std::cout << "║══════════════════════════════════════║" << std::endl;
+  std::cout << "║                                      ║" << std::endl;
+  std::cout << "║          Choose option:              ║" << std::endl;
+  std::cout << "║           1. Open database           ║" << std::endl;
+  std::cout << "║           2. Create database         ║" << std::endl;
+  std::cout << "║           3. Exit                    ║" << std::endl;
+  std::cout << "║                                      ║" << std::endl;
+  std::cout << "║                                      ║" << std::endl;
+  std::cout << "║══════════════════════════════════════║" << std::endl;
+  std::cout << "║ :                                    ║" << std::endl;
+  std::cout << "╚══════════════════════════════════════╝";
   std::cout << "\033[5B";
   std::cout << "\r";
   do
@@ -210,5 +213,10 @@ void Console::print (const std::string& line1,
   fmt::print ("{}                                         \n", line3);
   std::cout << "                                         ";
   std::cout << "\r";
+
+}
+void
+Console::printConsole (const std::string& title, const std::string& line1, const std::string& line2, const std::string& line3)
+{
 
 };
