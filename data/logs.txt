@@ -1,0 +1,8 @@
+5/31/2023 17:42:47 - Failed! Path: ../data.txt
+5/31/2023 17:54:45 - Failed! Path: ../dat
+5/31/2023 17:59:30 - Failed! Path: d
+5/31/2023 18:1:0 - Failed! Path: data.txt
+5/31/2023 18:10:13 - Failed! Path: s
+5/31/2023 18:20:46 - Failed! Path: ../data.dat
+5/31/2023 18:24:59 - Success! Path: ../file.dat
+5/31/2023 18:48:0 - Success! Path: ../data.txt

@@ -16,27 +16,24 @@
  * 		Add password: with notification
  */
 class Console {
-    bool exit = false;
-    std::string filePath;
+  bool exit = false;
+  std::string filePath;
 
-public:
-    Console();
+ public:
+  Console ();
 
-private:
-    void createDatabase();
+ private:
+  void createDatabase ();
 
-    void openDatabase();
+  void openDatabase ();
 
-    static bool isStrongPassword(const std::string &password);
+  static bool isStrongPassword (const std::string& password);
 
-    static bool is_empty(std::ifstream &pFile);
+  static bool is_empty (std::ifstream& pFile);
 
-
-    static void clearInput();
-
-    static void print(const std::string &line1 = " ",
-                      const std::string &line2 = " ",
-                      const std::string &line3 = " ");
+  static void print (const std::string& line1 = " ",
+					 const std::string& line2 = " ",
+					 const std::string& line3 = " ");
 
 };
 
