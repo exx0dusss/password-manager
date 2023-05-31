@@ -31,15 +31,17 @@ class Console {
 
   static bool is_empty (std::ifstream& pFile);
 
-  static void print (const std::string& line1 = " ",
-					 const std::string& line2 = " ",
-					 const std::string& line3 = " ");
+  static void printExtra (const std::string& error = " ");
   static void printConsole (
+
 	  const std::string& title = " ",
 	  const std::string& line1 = " ",
 	  const std::string& line2 = " ",
-	  const std::string& line3 = " "
+	  const std::string& line3 = " ",
+	  const std::string& line4 = " ",
+	  const std::string& line5 = " "
   );
+  static std::string printCentered (const std::string& text);
 
 };
 

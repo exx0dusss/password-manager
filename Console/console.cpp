@@ -7,28 +7,23 @@
 #include <fmt/format.h>
 #include <fmt/ostream.h>
 #include "../Encryptor/encryptor.h"
+#include <iomanip>
+#include <sstream>
 
 //std::cout << "\033[1A";  // Move the cursor up 1 line
 Console::Console ()
 {
   SetConsoleOutputCP (CP_UTF8);
-  std::cout << "╔══════════════════════════════════════╗" << std::endl;
-  std::cout << "║    Welcome to the Password Manager!  ║" << std::endl;
-  std::cout << "║══════════════════════════════════════║" << std::endl;
-  std::cout << "║                                      ║" << std::endl;
-  std::cout << "║          Choose option:              ║" << std::endl;
-  std::cout << "║           1. Open database           ║" << std::endl;
-  std::cout << "║           2. Create database         ║" << std::endl;
-  std::cout << "║           3. Exit                    ║" << std::endl;
-  std::cout << "║                                      ║" << std::endl;
-  std::cout << "║                                      ║" << std::endl;
-  std::cout << "║══════════════════════════════════════║" << std::endl;
-  std::cout << "║ :                                    ║" << std::endl;
-  std::cout << "╚══════════════════════════════════════╝";
-  std::cout << "\033[5B";
-  std::cout << "\r";
+
   do
 	{
+	  printConsole (
+		  "Welcome to Password Manager!",
+		  "",
+		  "1. Open database",
+		  "2. Create database",
+		  "3. Exit"
+	  );
 	  std::string option;
 	  std::cin >> option;
 //	  std::getline (std::cin, option);
@@ -45,7 +40,7 @@ Console::Console ()
 		exit = true;
 		  break;
 	  default:
-		print ("Wrong input!");
+		printExtra ("Wrong Input!");
 		  break;
 		}
 	}
@@ -55,7 +50,7 @@ Console::Console ()
 
 void Console::openDatabase ()
 {
-  print ("Input source file path:");
+  printConsole ("", "", "Input source file path:");
   std::cin >> filePath;
   if (std::filesystem::exists (filePath))
 	{
@@ -63,13 +58,13 @@ void Console::openDatabase ()
 
 	  if (!inputFile)
 		{
-		  print ("Failed to open output file!");
+		  printExtra ("Failed to open output file!");
 		  exit = true;
 		  return;
 		}
 
 	  std::string password;
-	  print ("Enter the file password:");
+	  printConsole ("", "", "Enter the file password:");
 	  std::cin >> password;
 
 	  std::string line;
@@ -96,18 +91,19 @@ void Console::openDatabase ()
 
 	  if (Encryptor::decrypt (line) == password)
 		{
-		  print ("Success!");
+		  printExtra ("Success!");
 		  logFile << mdy << " " << time << " - Success! Path: " << filePath << std::endl;
 		}
 	  else
 		{
-		  print ("Failed!");
+		  printExtra ("Failed!");
 		  logFile << mdy << " " << time << " - Failed! Path: " << filePath << std::endl;
+		  return;
 		}
 	}
   else
 	{
-	  print ("File doesn`t exist!");
+	  printExtra ("File doesn`t exist!");
 	  return;
 	};
 
@@ -115,13 +111,12 @@ void Console::openDatabase ()
 
 void Console::createDatabase ()
 {
-  print ("Input file path to create:");
+  printConsole ("", "", "Input file path to create:");
   std::cin >> filePath;
   std::ifstream inputFile (filePath, std::ios::app);
   if (!is_empty (inputFile))
 	{
-	  print ("The file may contain a database already!",
-			 "Override? 1/2");
+	  printExtra ("The file may contain a database already! Override? 1/2");
 	  int choice;
 	  std::cin >> choice;
 	  if (choice == 2)
@@ -132,14 +127,14 @@ void Console::createDatabase ()
   std::ofstream outputFile (filePath);
   if (!outputFile)
 	{
-	  print ("Failed to create file!");
+	  printExtra ("Failed to create file!");
 	  exit = true;
 	  return;
 	}
   std::string password;
   while (true)
 	{
-	  print ("Create file password:");
+	  printConsole ("", "", "", "Create file password:");
 	  std::cin.ignore (std::numeric_limits<std::streamsize>::max (), '\n');
 
 	  std::cin >> password;
@@ -147,7 +142,7 @@ void Console::createDatabase ()
 		{
 		  break;
 		}
-	  print ("Password is weak!", "Input other? 1/2");
+	  printConsole ("", "", "", "Password is weak! Input other? 1/2");
 	  int choice;
 	  std::cin >> choice;
 	  if (choice == 2)
@@ -158,7 +153,7 @@ void Console::createDatabase ()
 	}
 
   outputFile << Encryptor::encrypt (password) << std::endl;
-  print ("Success! Remember to save this password!");
+  printExtra ("Success! Remember to save this password!");
 
 }
 
@@ -202,21 +197,50 @@ bool Console::isStrongPassword (const std::string& password)
   return false;
 }
 
-void Console::print (const std::string& line1,
-					 const std::string& line2,
-					 const std::string& line3)
-{
-  std::cout << "\r";
-  std::cout << "\033[4A";
-  fmt::print ("{}                                         \n", line1);
-  fmt::print ("{}                                         \n", line2);
-  fmt::print ("{}                                         \n", line3);
-  std::cout << "                                         ";
-  std::cout << "\r";
-
-}
 void
-Console::printConsole (const std::string& title, const std::string& line1, const std::string& line2, const std::string& line3)
+Console::printConsole (const std::string& title, const std::string& line1, const std::string& line2, const std::string& line3, const std::string& line4, const std::string& line5)
 {
+  std::cout << "\033[14A";
+  std::cout << "\r";
+  std::cout << "╔══════════════════════════════════════╗" << std::endl;
+  std::cout << "║" << printCentered (title) << "║" << std::endl;
+  std::cout << "║══════════════════════════════════════║" << std::endl;
+  std::cout << "║  Choose option:                      ║" << std::endl;
+  std::cout << "║" << printCentered (line1) << "║" << std::endl;
+  std::cout << "║" << printCentered (line2) << "║" << std::endl;
+  std::cout << "║" << printCentered (line3) << "║" << std::endl;
+  std::cout << "║" << printCentered (line4) << "║" << std::endl;
+  std::cout << "║" << printCentered (line5) << "║" << std::endl;
+  std::cout << "║                                      ║" << std::endl;
+  std::cout << "║══════════════════════════════════════║" << std::endl;
+  std::cout << "║ :                                    ║" << std::endl;
+  std::cout << "╚══════════════════════════════════════╝";
+  std::cout << "\033[1A";
+  std::cout << "\r";
+  std::cout << "\033[4C";
+  std::cout << "                                   ";
+  std::cout << "\r";
+  std::cout << "\033[4C";
+}
 
-};
+std::string Console::printCentered (const std::string& text)
+{
+  std::ostringstream oss;
+  int padding = 38 - text.length ();
+  int leftPadding = padding / 2;
+  int rightPadding = padding - leftPadding;
+
+  oss << std::setw (leftPadding + text.length ()) << std::setfill (' ') << text
+	  << std::setw (rightPadding) << std::setfill (' ') << "";
+
+  return oss.str ();
+}
+void Console::printExtra (const std::string& error)
+{
+  std::cout << "\033[3B";
+  std::cout << "\r";
+  std::cout << error;
+  std::cout << "\033[3A";
+  std::cout << "\r";
+}
+

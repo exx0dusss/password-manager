@@ -7,3 +7,14 @@
 5/31/2023 18:24:59 - Success! Path: ../file.dat
 5/31/2023 18:48:0 - Success! Path: ../data.txt
 5/31/2023 20:15:50 - Success! Path: ../passwords.dat
+5/31/2023 20:46:35 - Failed! Path: 1
+5/31/2023 20:47:39 - Failed! Path: ../file.dat
+5/31/2023 20:49:4 - Failed! Path: ../data.txt
+5/31/2023 20:49:52 - Failed! Path: d
+5/31/2023 20:49:58 - Success! Path: d
+5/31/2023 20:50:18 - Failed! Path: d
+5/31/2023 20:56:38 - Success! Path: d
+5/31/2023 20:56:41 - Failed! Path: d
+5/31/2023 20:58:51 - Success! Path: ../dat.txt
+5/31/2023 21:0:15 - Failed! Path: d
+5/31/2023 21:3:10 - Success! Path: ../base.txt
