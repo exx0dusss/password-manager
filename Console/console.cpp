@@ -9,6 +9,7 @@
 #include "../Encryptor/encryptor.h"
 #include <iomanip>
 #include <sstream>
+#include <random>
 
 //std::cout << "\033[1A";  // Move the cursor up 1 line
 Console::Console() {
@@ -104,7 +105,7 @@ void Console::createDatabase() {
     std::cin >> filePath;
     std::ifstream inputFile(filePath, std::ios::app);
     if (!is_empty(inputFile)) {
-        fmt::print("\nThe file may contain a database already!\n Override? 1/2\n");
+        fmt::print("\nThe file may contain a database already!\n Override? (1/2)\n");
         int choice;
         std::cin >> choice;
         if (choice == 2) {
@@ -223,7 +224,7 @@ void Console::addPassword() {
         if (findCategory(categories, category)) {
             passwordCategories += (category + ',');
             std::string option;
-            fmt::print("\nAdd one more? 1/2\n");
+            fmt::print("\nAdd one more? (1/2)\n");
             std::cin >> option;
             if (option[0] == '2')
                 break;
@@ -231,7 +232,7 @@ void Console::addPassword() {
 
         }
         fmt::print("\nCategory missing!\n");
-        fmt::print("\nCreate new? 1/2\n");
+        fmt::print("\nCreate new? (1/2)\n");
         std::string option1;
         std::cin >> option1;
         if (option1[0] == '2') {
@@ -241,7 +242,7 @@ void Console::addPassword() {
         addCategory();
     } while (true);
 
-    fmt::print("\nAdd Website/Service and Login? 1/2\n");
+    fmt::print("\nAdd Website/Service and Login? (1/2)\n");
     std::string option;
     std::cin >> option;
     if (option[0] == '1') {
@@ -293,59 +294,153 @@ void Console::deletePassword() {
     fmt::print("\nEnter the name of password data:\n");
     std::string option;
     std::cin >> option;
+    std::vector<int> indicesToDelete;
+
     if (findPassword(option)) {
-        fmt::print("\nChoose Index:\n");
+        fmt::print("\nChoose Index (Enter 'end' when done):\n");
         std::string index;
-        std::cin >> index;
-        passwords.erase(passwords.begin() + index[0]);
-        return;
-    }
-    fmt::print("\nNo passwords with such name\n");
-}
+        while (std::cin >> index) {
+            if (index == "end") {
+                break;
+            }
+            int parsedIndex = std::stoi(index);
+            indicesToDelete.push_back(parsedIndex);
+        }
 
-void Console::searchPasswords() {
-    fmt::print("\nEnter the name of password data:\n");
-    std::string option;
-    std::cin >> option;
-    option = option;
-    if (findPassword(option)) {
-        fmt::print("\nSuccess!\n");
-        return;
-    }
-    fmt::print("\nNo passwords with such name\n");
+        std::sort(indicesToDelete.begin(), indicesToDelete.end(), std::greater<int>());
 
-
-}
-
-void Console::sortPasswords() {
-    int numCategories;
-    fmt::print("Enter the number of categories to compare:\n");
-    std::cin >> numCategories;
-
-    std::vector<std::string> categories;
-    categories.reserve(numCategories);
-    for (int i = 0; i < numCategories; ++i) {
-        fmt::print("Enter category {}:\n", i + 1);
-        std::string category;
-        std::cin >> category;
-        categories.push_back(category);
-    }
-
-    std::sort(passwords.begin(), passwords.end(), [&](const Password &a, const Password &b) {
-        std::string categoryA = a.getCategories();
-        std::string categoryB = b.getCategories();
-
-        for (const auto &category: categories) {
-            size_t posA = categoryA.find(category);
-            size_t posB = categoryB.find(category);
-
-            if (posA != posB) {
-                return posA < posB;
+        for (int index: indicesToDelete) {
+            if (index >= 0 && index < passwords.size()) {
+                passwords.erase(passwords.begin() + index);
             }
         }
 
-        return categoryA < categoryB;
-    });
+        fmt::print("\nPassword(s) deleted successfully.\n");
+        return;
+    }
+
+    fmt::print("\nNo passwords with such name\n");
+}
+
+
+void Console::searchPasswords() {
+    fmt::print("Select search option:\n");
+    fmt::print("1. Search by Name\n");
+    fmt::print("2. Search by Category\n");
+    fmt::print("3. Search by Login\n");
+    fmt::print("4. Search by Service\n");
+
+    std::string option;
+    std::cin >> option;
+
+    std::string searchValue;
+    fmt::print("Enter the search value:\n");
+    std::cin >> searchValue;
+
+    bool found = false;
+
+    switch (option[0]) {
+        case '1':
+            for (const auto &password: passwords) {
+                std::string name = Encryptor::decrypt(password.get_name());
+                if (name == searchValue) {
+                    printPassword(password);
+                    found = true;
+                }
+            }
+            break;
+        case '2':
+            for (const auto &password: passwords) {
+                std::string categories = Encryptor::decrypt(password.getCategories());
+                std::stringstream ss(categories);
+                std::string category;
+                while (std::getline(ss, category, ',')) {
+                    if (category == searchValue) {
+                        printPassword(password);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            break;
+        case '3':
+            for (const auto &password: passwords) {
+                std::string login = Encryptor::decrypt(password.get_login());
+                if (login == searchValue) {
+                    printPassword(password);
+                    found = true;
+                }
+            }
+            break;
+        case '4':
+            for (const auto &password: passwords) {
+                std::string service = Encryptor::decrypt(password.get_service());
+                if (service == searchValue) {
+                    printPassword(password);
+                    found = true;
+                }
+            }
+            break;
+        default:
+            fmt::print("Wrong Input!\n");
+            return;
+    }
+
+    if (!found) {
+        fmt::print("\nNo passwords with such {} found.\n", (option[0] == '1' ? "name" :
+                                                            (option[0] == '2' ? "category" :
+                                                             (option[0] == '3' ? "login" :
+                                                              (option[0] == '4' ? "service" : "")))));
+    }
+}
+
+void Console::sortPasswords() {
+    fmt::print("Select sorting option:\n");
+    fmt::print("1. Sort by Name\n");
+    fmt::print("2. Sort by Category\n");
+    fmt::print("3. Sort by Login\n");
+    fmt::print("4. Sort by Service\n");
+
+    std::string option;
+    std::cin >> option;
+
+    std::function<bool(const Password &, const Password &)> comparator;
+
+    switch (option[0]) {
+        case '1':
+            comparator = [](const Password &a, const Password &b) {
+                std::string nameA = Encryptor::decrypt(a.get_name());
+                std::string nameB = Encryptor::decrypt(b.get_name());
+                return nameA < nameB;
+            };
+            break;
+        case '2':
+            comparator = [](const Password &a, const Password &b) {
+                std::string categoryA = Encryptor::decrypt(a.getCategories());
+                std::string categoryB = Encryptor::decrypt(b.getCategories());
+                return categoryA < categoryB;
+            };
+            break;
+        case '3':
+            comparator = [](const Password &a, const Password &b) {
+                std::string loginA = Encryptor::decrypt(a.get_login());
+                std::string loginB = Encryptor::decrypt(b.get_login());
+                return loginA < loginB;
+            };
+            break;
+        case '4':
+            comparator = [](const Password &a, const Password &b) {
+                std::string serviceA = Encryptor::decrypt(a.get_service());
+                std::string serviceB = Encryptor::decrypt(b.get_service());
+                return serviceA < serviceB;
+            };
+            break;
+        default:
+            fmt::print("Wrong Input!\n");
+            return;
+    }
+
+    std::sort(passwords.begin(), passwords.end(), comparator);
 
     fmt::print("\n--- Sorted Passwords ---\n");
     for (const auto &password: passwords) {
@@ -405,7 +500,7 @@ void Console::deleteCategory() {
             auto passwordCategories = data.getCategories();
             if (findCategory(passwordCategories, categoryToRemove)) {
                 std::string option;
-                fmt::print("\nSome passwords may contain this category\nConfirm? 1/2\n");
+                fmt::print("\nSome passwords may contain this category\nConfirm? (1/2)\n");
                 std::cin >> option;
                 if (option[0] == '2') {
                     return;
@@ -432,23 +527,97 @@ void Console::deleteCategory() {
 std::string Console::createPassword() {
     std::string password;
     while (true) {
-        fmt::print("\nCreate new password:\n");
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        std::cin >> password;
-        if (isStrongPassword(password)) {
-            break;
-        }
-        fmt::print("\nPassword is weak!\nInput other? 1/2\n");
+        fmt::print("\nChoose an option:\n");
+        fmt::print("1. Generate a password\n");
+        fmt::print("2. Enter a password manually\n");
         int choice;
         std::cin >> choice;
-        if (choice == 2) {
-            break;
+
+        if (choice == 1) {
+            password = generatePassword();
+            fmt::print("\nGenerated password: {}\n", password);
+        } else if (choice == 2) {
+            fmt::print("\nEnter a new password:\n");
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin >> password;
+        } else {
+            fmt::print("\nInvalid choice. Please try again.\n");
+            continue;
+        }
+
+        if (!findUsedPassword(password)) {
+            return password;
+        } else {
+            fmt::print("\nThis password is already used.\n");
+            fmt::print("Would you like to try again? (1/2)\n");
+            std::cin >> choice;
+            if (choice == 2) {
+                break;
+            }
+        }
+
+        if (!isStrongPassword(password)) {
+            fmt::print("\nPassword is weak!\n");
+            fmt::print("Would you like to try again? (1/2)\n");
+            std::cin >> choice;
+            if (choice == 2) {
+                return password;
+            }
         }
 
     }
+    return "";
+}
+
+std::string Console::generatePassword() {
+    const std::string &lowerCase = Encryptor::getLowerCase();
+    const std::string &upperCase = Encryptor::getUpperCase();
+    const std::string &numerics = Encryptor::getNumerics();
+    const std::string &symbols = Encryptor::getSymbols();
+
+    std::string password;
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    int length;
+    bool includeUpperCase;
+    bool includeSymbols;
+
+    fmt::print("\nEnter the desired length of the password: ");
+    std::cin >> length;
+
+    fmt::print("Include uppercase letters? (1/2): ");
+    std::string choice;
+    std::cin >> choice;
+    includeUpperCase = (choice[0]);
+
+    fmt::print("Include special symbols? (1/2): ");
+    std::cin >> choice;
+    includeSymbols = (choice[0]);
+
+    std::string charSet;
+    charSet += lowerCase;
+    if (includeUpperCase) {
+        charSet += upperCase;
+    }
+    charSet += numerics;
+    if (includeSymbols) {
+        charSet += symbols;
+    }
+
+    if (charSet.empty()) {
+        fmt::print("\nError: No character set selected.\n");
+        return "";
+    }
+
+    for (int i = 0; i < length; ++i) {
+        std::uniform_int_distribution<> dis(0, charSet.size() - 1);
+        password += charSet[dis(gen)];
+    }
+
     return password;
 }
+
 
 bool Console::findCategory(const std::string &sourceCategories, const std::string &categoryToFind) {
     std::istringstream iss(sourceCategories);
@@ -507,14 +676,15 @@ std::vector<Password> Console::getPasswords() {
                 values.push_back(value);
             }
             std::string name;
-            std::string password;
             std::string passwordCategories;
+
+            std::string password;
             std::string service;
             std::string login;
             if (!values.empty()) {
                 name = values[0];
-                password = values[1];
-                passwordCategories = values[2];
+                passwordCategories = values[1];
+                password = values[2];
                 service = values[3];
                 login = values[4];
                 oldPasswords.push_back(
@@ -597,3 +767,16 @@ bool Console::findPassword(const std::string &nameToFind) {
     return false;
 
 }
+
+bool Console::findUsedPassword(const std::string &password) {
+    for (const auto &data: passwords) {
+        if (Encryptor::encrypt(password) == data.get_password()) {
+            return true;
+        }
+    }
+
+    return false;
+
+}
+
+

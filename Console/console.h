@@ -33,7 +33,7 @@ public:
 
     void printActions();
 
-    static std::string createPassword();
+    std::string createPassword();
 
     void addPassword();
 
@@ -54,11 +54,14 @@ public:
     static bool findCategory(const std::string &sourceCategories,
                              const std::string &categoryToFind);
 
-    bool findPassword(const std::string &passwordToFind);
+    bool findPassword(const std::string &nameToFind);
+
+    bool findUsedPassword(const std::string &passwordToFind);
 
     void
     writePasswords(const std::string &password, const std::vector<Password> &newPasswords) const;
 
+    std::string generatePassword();
 
     static bool isStrongPassword(const std::string &password);
 
@@ -67,6 +70,7 @@ public:
     std::string getFilePassword();
 
     static void printPassword(const Password &data);
+
 };
 
 #endif // CONSOLE_H

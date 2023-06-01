@@ -4,10 +4,10 @@
 const std::string Encryptor::lowerCase{"abcdefghijklmnopqrstuvwxyz"};
 const std::string Encryptor::upperCase{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 const std::string Encryptor::numerics{"0123456789"};
-const std::string Encryptor::symbols{"~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/"};
+const std::string Encryptor::symbols{"~`!@#$%^&*()_-+={[}]|\\:;\"'<>.?/"};
 const std::string Encryptor::code{
         Encryptor::lowerCase + Encryptor::upperCase + Encryptor::numerics + Encryptor::symbols};
-const std::string Encryptor::key{"\"*)]Z/NL^`\\W+E(.3$;{B,G9JHQDY-V!T6KFU#<"
+const std::string Encryptor::key{"\"*)]Z/NL^`\\W+E(.3$;{BG9JHQDY-V!T6KFU#<"
                                  "OM1?|%=5PCA:SR7xz[nl@web~gjhq8d2y0'}vtk>4fuomp_&ciasr"};
 
 bool Encryptor::charInRange(const char c) {
