@@ -2,6 +2,8 @@
 #define CONSOLE_H
 
 #include <fstream>
+#include "../Password/password.h"
+#include <set>
 
 /**
  * Choose a source file
@@ -16,33 +18,55 @@
  * 		Add password: with notification
  */
 class Console {
-  bool exit = false;
-  std::string filePath;
+public:
+    Console();
 
- public:
-  Console ();
+    std::vector<Password> getPasswords();
 
- private:
-  void createDatabase ();
+    std::string filePath;
+    std::string categories;
+    std::vector<Password> passwords;
 
-  void openDatabase ();
+    void createDatabase();
 
-  static bool isStrongPassword (const std::string& password);
+    bool openDatabase();
 
-  static bool is_empty (std::ifstream& pFile);
+    void printActions();
 
-  static void printExtra (const std::string& error = " ");
-  static void printConsole (
+    static std::string createPassword();
 
-	  const std::string& title = " ",
-	  const std::string& line1 = " ",
-	  const std::string& line2 = " ",
-	  const std::string& line3 = " ",
-	  const std::string& line4 = " ",
-	  const std::string& line5 = " "
-  );
-  static std::string printCentered (const std::string& text);
+    void addPassword();
 
+    void editPassword();
+
+    void deletePassword();
+
+    void searchPasswords();
+
+    void sortPasswords();
+
+    void addCategory();
+
+    void deleteCategory();
+
+    void printPasswords();
+
+    static bool findCategory(const std::string &sourceCategories,
+                             const std::string &categoryToFind);
+
+    bool findPassword(const std::string &passwordToFind);
+
+    void
+    writePasswords(const std::string &password, const std::vector<Password> &newPasswords) const;
+
+
+    static bool isStrongPassword(const std::string &password);
+
+    static bool is_empty(std::ifstream &pFile);
+
+    std::string getFilePassword();
+
+    static void printPassword(const Password &data);
 };
 
 #endif // CONSOLE_H
