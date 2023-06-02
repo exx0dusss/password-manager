@@ -272,38 +272,56 @@ void Console::addPassword() {
     );
 }
 
-bool Console::is_empty(std::ifstream &pFile) {
-    return pFile.peek() == std::ifstream::traits_type::eof();
+std::string Console::generatePassword() {
+    const std::string &lowerCase = Encryptor::getLowerCase();
+    const std::string &upperCase = Encryptor::getUpperCase();
+    const std::string &numerics = Encryptor::getNumerics();
+    const std::string &symbols = Encryptor::getSymbols();
 
-}
+    std::string password;
+    std::random_device rd;
+    std::mt19937 gen(rd());
 
-bool Console::isStrongPassword(const std::string &password) {
-    int length = 0;
-    bool hasUpperCase = false;
-    bool hasLowerCase = false;
-    bool hasSpecialChar = false;
-    bool hasNumber = false;
-    for (auto c: password) {
-        if (!hasUpperCase && Encryptor::getUpperCase().find(c) != std::string::npos) {
-            hasUpperCase = true;
-        }
-        if (!hasLowerCase && Encryptor::getLowerCase().find(c) != std::string::npos) {
-            hasLowerCase = true;
-        }
-        if (!hasSpecialChar && Encryptor::getSymbols().find(c) != std::string::npos) {
-            hasSpecialChar = true;
-        }
-        if (!hasNumber && Encryptor::getNumerics().find(c) != std::string::npos) {
-            hasNumber = true;
-        }
-        length++;
+    int length;
+    bool includeUpperCase;
+    bool includeSymbols;
+
+    fmt::print("\nEnter the desired length of the password: ");
+    std::cin >> length;
+    std::cin.ignore();
+    fmt::print("Include uppercase letters? (1/2): ");
+    std::string choice;
+    std::cin >> choice;
+    std::cin.ignore();
+    includeUpperCase = (choice[0]);
+
+    fmt::print("Include special symbols? (1/2): ");
+    std::cin >> choice;
+    std::cin.ignore();
+    includeSymbols = (choice[0]);
+
+    std::string charSet;
+    charSet += lowerCase;
+    if (includeUpperCase) {
+        charSet += upperCase;
     }
-    if (length >= 8 && hasUpperCase && hasLowerCase && hasSpecialChar && hasNumber) {
-        return true;
+    charSet += numerics;
+    if (includeSymbols) {
+        charSet += symbols;
     }
-    return false;
-}
 
+    if (charSet.empty()) {
+        fmt::print("\nError: No character set selected.\n");
+        return "";
+    }
+
+    for (int i = 0; i < length; ++i) {
+        std::uniform_int_distribution<> dis(0, charSet.size() - 1);
+        password += charSet[dis(gen)];
+    }
+
+    return password;
+}
 
 void Console::editPassword() {
 
@@ -376,7 +394,6 @@ void Console::editPassword() {
 
 }
 
-
 void Console::deletePassword() {
 
     std::vector<int> indicesToDelete;
@@ -403,7 +420,6 @@ void Console::deletePassword() {
     fmt::print("\nPassword(s) deleted successfully.\n");
 
 }
-
 
 void Console::searchPasswords() {
     fmt::print("Select search option:\n");
@@ -476,6 +492,47 @@ void Console::searchPasswords() {
     }
 }
 
+void Console::printPasswords() {
+    int index = 0;
+    for (const auto &data: passwords) {
+        fmt::print("\n{}.\n", index++);
+        printPassword(data);
+    }
+}
+
+std::string Console::getFilePassword() const {
+    if (std::filesystem::exists(filePath)) {
+        std::ifstream inputFile(filePath, std::ios::app);
+
+        if (!inputFile) {
+            fmt::print("\nFailed to open output file!\n");
+            return "";
+        }
+
+        std::string line;
+        std::getline(inputFile, line);
+        return line;
+
+
+    } else {
+        fmt::print("\nFile doesn't exist!\n");
+        return "";
+    }
+
+
+}
+
+bool Console::findUsedPassword(const std::string &password) {
+    for (const auto &data: passwords) {
+        if (Encryptor::encrypt(password) == data.get_password()) {
+            return true;
+        }
+    }
+
+    return false;
+
+}
+
 void Console::sortPasswords() {
     fmt::print("Select sorting option:\n");
     fmt::print("1. Sort by Name\n");
@@ -531,6 +588,37 @@ void Console::sortPasswords() {
     }
 }
 
+bool Console::is_empty(std::ifstream &pFile) {
+    return pFile.peek() == std::ifstream::traits_type::eof();
+
+}
+
+bool Console::isStrongPassword(const std::string &password) {
+    int length = 0;
+    bool hasUpperCase = false;
+    bool hasLowerCase = false;
+    bool hasSpecialChar = false;
+    bool hasNumber = false;
+    for (auto c: password) {
+        if (!hasUpperCase && Encryptor::getUpperCase().find(c) != std::string::npos) {
+            hasUpperCase = true;
+        }
+        if (!hasLowerCase && Encryptor::getLowerCase().find(c) != std::string::npos) {
+            hasLowerCase = true;
+        }
+        if (!hasSpecialChar && Encryptor::getSymbols().find(c) != std::string::npos) {
+            hasSpecialChar = true;
+        }
+        if (!hasNumber && Encryptor::getNumerics().find(c) != std::string::npos) {
+            hasNumber = true;
+        }
+        length++;
+    }
+    if (length >= 8 && hasUpperCase && hasLowerCase && hasSpecialChar && hasNumber) {
+        return true;
+    }
+    return false;
+}
 
 void Console::printPassword(const Password &data) {
     std::string name;
@@ -550,13 +638,6 @@ void Console::printPassword(const Password &data) {
     fmt::print("Login: {}\n", login);
 }
 
-void Console::printPasswords() {
-    int index = 0;
-    for (const auto &data: passwords) {
-        fmt::print("\n{}.\n", index++);
-        printPassword(data);
-    }
-}
 
 void Console::addCategory() {
     std::string newCategory;
@@ -646,58 +727,6 @@ std::vector<std::string> Console::splitString(const std::string &str, char delim
 }
 
 
-std::string Console::generatePassword() {
-    const std::string &lowerCase = Encryptor::getLowerCase();
-    const std::string &upperCase = Encryptor::getUpperCase();
-    const std::string &numerics = Encryptor::getNumerics();
-    const std::string &symbols = Encryptor::getSymbols();
-
-    std::string password;
-    std::random_device rd;
-    std::mt19937 gen(rd());
-
-    int length;
-    bool includeUpperCase;
-    bool includeSymbols;
-
-    fmt::print("\nEnter the desired length of the password: ");
-    std::cin >> length;
-    std::cin.ignore();
-    fmt::print("Include uppercase letters? (1/2): ");
-    std::string choice;
-    std::cin >> choice;
-    std::cin.ignore();
-    includeUpperCase = (choice[0]);
-
-    fmt::print("Include special symbols? (1/2): ");
-    std::cin >> choice;
-    std::cin.ignore();
-    includeSymbols = (choice[0]);
-
-    std::string charSet;
-    charSet += lowerCase;
-    if (includeUpperCase) {
-        charSet += upperCase;
-    }
-    charSet += numerics;
-    if (includeSymbols) {
-        charSet += symbols;
-    }
-
-    if (charSet.empty()) {
-        fmt::print("\nError: No character set selected.\n");
-        return "";
-    }
-
-    for (int i = 0; i < length; ++i) {
-        std::uniform_int_distribution<> dis(0, charSet.size() - 1);
-        password += charSet[dis(gen)];
-    }
-
-    return password;
-}
-
-
 bool Console::findCategory(const std::string &sourceCategories, const std::string &categoryToFind) {
     std::istringstream iss(sourceCategories);
     std::string category;
@@ -710,28 +739,6 @@ bool Console::findCategory(const std::string &sourceCategories, const std::strin
     return false;
 }
 
-
-std::string Console::getFilePassword() const {
-    if (std::filesystem::exists(filePath)) {
-        std::ifstream inputFile(filePath, std::ios::app);
-
-        if (!inputFile) {
-            fmt::print("\nFailed to open output file!\n");
-            return "";
-        }
-
-        std::string line;
-        std::getline(inputFile, line);
-        return line;
-
-
-    } else {
-        fmt::print("\nFile doesn't exist!\n");
-        return "";
-    }
-
-
-}
 
 std::vector<Password> Console::getPasswords() {
     if (std::filesystem::exists(this->filePath)) {
@@ -821,15 +828,6 @@ void Console::writePasswords(const std::string &filePassword,
 
 }
 
-bool Console::findUsedPassword(const std::string &password) {
-    for (const auto &data: passwords) {
-        if (Encryptor::encrypt(password) == data.get_password()) {
-            return true;
-        }
-    }
 
-    return false;
-
-}
 
 
