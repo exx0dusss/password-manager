@@ -1,14 +1,20 @@
 #include <random>
 #include "encryptor.h"
+#include <iostream>
+
 
 const std::string Encryptor::lowerCase{"abcdefghijklmnopqrstuvwxyz"};
 const std::string Encryptor::upperCase{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 const std::string Encryptor::numerics{"0123456789"};
-const std::string Encryptor::symbols{"~`!@#$%^&*()_-+={[}]|\\:;\"'<>.?/"};
+const std::string Encryptor::symbols{"~`!@#$%^&*()_-+={[}]|:;\"'<>.?/"};
+
+
 const std::string Encryptor::code{
         Encryptor::lowerCase + Encryptor::upperCase + Encryptor::numerics + Encryptor::symbols};
-const std::string Encryptor::key{"\"*)]Z/NL^`\\W+E(.3$;{BG9JHQDY-V!T6KFU#<"
+
+const std::string Encryptor::key{"\"*)]Z/NL^`W+E(.3$;{BG9JHQDY-V!T6KFU#<"
                                  "OM1?|%=5PCA:SR7xz[nl@web~gjhq8d2y0'}vtk>4fuomp_&ciasr"};
+
 
 bool Encryptor::charInRange(const char c) {
     if (c >= (char) (0x0 + 160) && c <= (char) (0x0 + 255))
@@ -18,7 +24,7 @@ bool Encryptor::charInRange(const char c) {
 
 std::string Encryptor::encrypt(const std::string &message) {
     std::string encryptedMessage = message;
-    for (int i = 0; i < message.length(); ++i) {
+    for (int i = 0; i < encryptedMessage.length(); ++i) {
         if (encryptedMessage[i + 1] == encryptedMessage[i]) {
             for (int j = i + 1; j < encryptedMessage.length(); ++j) {
                 if (encryptedMessage[j] == encryptedMessage[i]) {

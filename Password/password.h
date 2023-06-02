@@ -8,41 +8,37 @@
 
 class Password {
 private:
-    std::string name;
-    std::string password;
-    std::string categories;
-    std::string service;
-    std::string login;
+    std::string name; ///< name of the password data
+    std::string password; ///< name of the password
+    std::string categories; ///< list of categories for password
+    std::string service; ///< service of password data
+    std::string login; ///< login of password data
 public:
-    Password(std::string name,
-             std::string password,
-             std::string categories);
-
     Password(std::string name,
              std::string password,
              std::string categories,
              std::string service,
              std::string login);
 
-    const std::string &get_name() const;
+    [[nodiscard]] const std::string &get_name() const; ///< name getter
 
-    void set_name(const std::string &newName);
+    void set_name(const std::string &newName); ///< name setter
 
-    const std::string &get_password() const;
+    [[nodiscard]] const std::string &get_password() const; ///< password getter
 
-    void set_password(const std::string &newPassword);
+    void set_password(const std::string &newPassword); ///< password setter
 
-    const std::string &getCategories() const;
+    [[nodiscard]] const std::string &getCategories() const; ///< categories getter
 
-    void setCategories(const std::string &newCategories);
+    void setCategories(const std::string &newCategories); ///< categories setter
 
-    const std::string &get_service() const;
+    [[nodiscard]] const std::string &get_service() const; ///< service getter
 
-    void set_service(const std::string &newService);
+    void set_service(const std::string &newService); ///< service setter
 
-    const std::string &get_login() const;
+    [[nodiscard]] const std::string &get_login() const; ///< login getter
 
-    void set_login(const std::string &newLogin);
+    void set_login(const std::string &newLogin); ///< setter
 };
 
 #endif //PASSWORD_MANAGER_PASSWORD_H
