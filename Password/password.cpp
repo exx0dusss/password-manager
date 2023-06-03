@@ -1,12 +1,7 @@
 
 #include "password.h"
 
-Password::Password(std::string name,
-                   std::string password,
-                   std::string categories) :
-        name(std::move(name)),
-        password(std::move(password)),
-        categories(categories) {}
+#include <utility>
 
 Password::Password(std::string name,
                    std::string password,
@@ -15,7 +10,7 @@ Password::Password(std::string name,
                    std::string login) :
         name(std::move(name)),
         password(std::move(password)),
-        categories(categories),
+        categories(std::move(categories)),
         service(std::move(service)),
         login(std::move(login)) {}
 

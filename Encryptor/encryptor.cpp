@@ -22,10 +22,12 @@ bool Encryptor::charInRange(const char c) {
     return false;
 }
 
+// password12345
+//
 std::string Encryptor::encrypt(const std::string &message) {
     std::string encryptedMessage = message;
     for (int i = 0; i < encryptedMessage.length(); ++i) {
-        if (encryptedMessage[i + 1] == encryptedMessage[i]) {
+        if (i + 1 < encryptedMessage.length() && encryptedMessage[i + 1] == encryptedMessage[i]) {
             for (int j = i + 1; j < encryptedMessage.length(); ++j) {
                 if (encryptedMessage[j] == encryptedMessage[i]) {
                     std::random_device rd;
@@ -50,7 +52,7 @@ std::string Encryptor::encrypt(const std::string &message) {
 std::string Encryptor::decrypt(const std::string &message) {
     std::string decryptedMessage = message;
     for (int i = 0; i < decryptedMessage.length(); ++i) {
-        if (charInRange(decryptedMessage[i + 1])) {
+        if (i + 1 < decryptedMessage.length() && charInRange(decryptedMessage[i + 1])) {
             for (int j = i + 1; j < decryptedMessage.length(); ++j) {
                 if (charInRange(decryptedMessage[j])) {
                     decryptedMessage[j] = decryptedMessage[i];

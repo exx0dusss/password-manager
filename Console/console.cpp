@@ -185,24 +185,24 @@ std::string Console::createPassword() {
         } else if (choice == 2) {
             fmt::print("\nEnter a new password:\n");
             std::getline(std::cin, password);
+            if (!isStrongPassword(password)) {
+                fmt::print("\nPassword is weak!\n");
+                fmt::print("Would you like to try again? (1/2)\n");
+                std::cin >> choice;
+                std::cin.ignore();
+                if (choice == 1) {
+                    continue;
+                }
+            }
             fmt::print("\nYour password: {}\n", password);
         } else {
             fmt::print("\nInvalid choice. Please try again.\n");
             continue;
         }
 
+
         if (findUsedPassword(password)) {
             fmt::print("\nThis password is already used.\n");
-            fmt::print("Would you like to try again? (1/2)\n");
-            std::cin >> choice;
-            std::cin.ignore();
-            if (choice == 1) {
-                continue;
-            }
-        }
-
-        if (!isStrongPassword(password)) {
-            fmt::print("\nPassword is weak!\n");
             fmt::print("Would you like to try again? (1/2)\n");
             std::cin >> choice;
             std::cin.ignore();
@@ -283,8 +283,8 @@ std::string Console::generatePassword() {
     std::mt19937 gen(rd());
 
     int length;
-    bool includeUpperCase;
-    bool includeSymbols;
+    char includeUpperCase;
+    char includeSymbols;
 
     fmt::print("\nEnter the desired length of the password: ");
     std::cin >> length;
@@ -302,11 +302,11 @@ std::string Console::generatePassword() {
 
     std::string charSet;
     charSet += lowerCase;
-    if (includeUpperCase) {
+    if (includeUpperCase == '1') {
         charSet += upperCase;
     }
     charSet += numerics;
-    if (includeSymbols) {
+    if (includeSymbols == '1') {
         charSet += symbols;
     }
 
@@ -358,10 +358,33 @@ void Console::editPassword() {
                 name = Encryptor::encrypt(name);
                 editPassword.set_name(name);
             } else if (choice[0] == '2') {
-                fmt::print("\nEnter new password categories (separated by comma):\n");
-                std::getline(std::cin, passwordCategories);
-                passwordCategories = Encryptor::encrypt(passwordCategories);
-                editPassword.setCategories(passwordCategories);
+                do {
+                    fmt::print("\nEnter category name:\n");
+                    std::string category;
+                    std::getline(std::cin, category);
+                    if (findCategory(categories, category)) {
+                        passwordCategories += (category + ',');
+                        std::string option;
+                        fmt::print("\nAdd one more category? (1/2)\n");
+                        std::cin >> option;
+                        std::cin.ignore();
+                        if (option[0] == '2')
+                            break;
+                        continue;
+
+                    }
+                    fmt::print("\nCategory missing!\n");
+                    fmt::print("\nCreate new? (1/2)\n");
+                    std::string option1;
+                    std::cin >> option1;
+                    std::cin.ignore();
+                    if (option1[0] == '2') {
+                        fmt::print("\nCategory wasn't added\n");
+                        break;
+                    }
+                    addCategory();
+                } while (true);
+
 
             } else if (choice[0] == '3') {
                 password = createPassword();
@@ -386,6 +409,8 @@ void Console::editPassword() {
                 fmt::print("\nInvalid choice. Please try again.\n");
             }
         }
+        passwordCategories = Encryptor::encrypt(passwordCategories);
+        editPassword.setCategories(passwordCategories);
         fmt::print("\nPassword data updated successfully.\n");
         return;
     } else {
@@ -395,9 +420,7 @@ void Console::editPassword() {
 }
 
 void Console::deletePassword() {
-
     std::vector<int> indicesToDelete;
-
     fmt::print("\nChoose Index (Enter 'end' when done):\n");
     std::string index;
     while (std::cin >> index) {
@@ -524,7 +547,7 @@ std::string Console::getFilePassword() const {
 
 bool Console::findUsedPassword(const std::string &password) {
     for (const auto &data: passwords) {
-        if (Encryptor::encrypt(password) == data.get_password()) {
+        if (password == Encryptor::decrypt(data.get_password())) {
             return true;
         }
     }

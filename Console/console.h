@@ -22,7 +22,7 @@ private:
       * 1. Gets the source file with database.\n
       * 2. Gets the source file password.\n
       * 3. Saves the log state to logs.txt file.\n
-      * @return Returns true if database exists and the password is correct.
+      * @return True if database exists and the password is correct.
       */
     bool openDatabase();
 
@@ -44,7 +44,7 @@ private:
       * 1. Gives option whether to generate or enter password.\n
       * 2. Checks if password is already used.\n
       * 3. Checks if password is weak (doesn't contain uppercase characters, symbols or numbers).\n
-      * @return Returns std::string password.
+      * @return std::string password.
       */
     std::string createPassword();
 
