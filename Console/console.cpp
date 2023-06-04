@@ -384,7 +384,8 @@ void Console::editPassword() {
                     }
                     addCategory();
                 } while (true);
-
+                passwordCategories = Encryptor::encrypt(passwordCategories);
+                editPassword.setCategories(passwordCategories);
 
             } else if (choice[0] == '3') {
                 password = createPassword();
@@ -409,8 +410,7 @@ void Console::editPassword() {
                 fmt::print("\nInvalid choice. Please try again.\n");
             }
         }
-        passwordCategories = Encryptor::encrypt(passwordCategories);
-        editPassword.setCategories(passwordCategories);
+
         fmt::print("\nPassword data updated successfully.\n");
         return;
     } else {
@@ -459,13 +459,14 @@ void Console::searchPasswords() {
     std::cin >> searchValue;
     std::cin.ignore();
     bool found = false;
-
+    fmt::print("\n");
     switch (option[0]) {
         case '1':
             for (const auto &password: passwords) {
                 std::string name = Encryptor::decrypt(password.get_name());
                 if (name == searchValue) {
                     printPassword(password);
+                    fmt::print("\n");
                     found = true;
                 }
             }
@@ -478,6 +479,7 @@ void Console::searchPasswords() {
                 while (std::getline(ss, category, ',')) {
                     if (category == searchValue) {
                         printPassword(password);
+                        fmt::print("\n");
                         found = true;
                         break;
                     }
@@ -489,6 +491,8 @@ void Console::searchPasswords() {
                 std::string login = Encryptor::decrypt(password.get_login());
                 if (login == searchValue) {
                     printPassword(password);
+                    fmt::print("\n");
+
                     found = true;
                 }
             }
@@ -498,6 +502,7 @@ void Console::searchPasswords() {
                 std::string service = Encryptor::decrypt(password.get_service());
                 if (service == searchValue) {
                     printPassword(password);
+                    fmt::print("\n");
                     found = true;
                 }
             }
@@ -681,7 +686,6 @@ void Console::deleteCategory() {
     std::string categoryToRemove;
     fmt::print("\nEnter category name\n");
     std::getline(std::cin, categoryToRemove);
-    fmt::print("\n{}\n", Encryptor::decrypt(categories));
     if (findCategory(categories, categoryToRemove)) {
         if (passwords.empty()) {
             size_t pos = categories.find(categoryToRemove);

@@ -1,5 +1,4 @@
 #include "Console/console.h"
 
-int main() {
-    new Console();
-}
+
+auto main() -> int { new Console(); }

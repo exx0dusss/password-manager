@@ -12,8 +12,8 @@ const std::string Encryptor::symbols{"~`!@#$%^&*()_-+={[}]|:;\"'<>.?/"};
 const std::string Encryptor::code{
         Encryptor::lowerCase + Encryptor::upperCase + Encryptor::numerics + Encryptor::symbols};
 
-const std::string Encryptor::key{"\"*)]Z/NL^`W+E(.3$;{BG9JHQDY-V!T6KFU#<"
-                                 "OM1?|%=5PCA:SR7xz[nl@web~gjhq8d2y0'}vtk>4fuomp_&ciasr"};
+const std::string Encryptor::key{
+        "aZDE012Wrpbc#$BijklghQMN|:;8tuv\"ST6534%CF!@mn-+owXYq.?xyzA&RGHIJKPdef9~`UVs^7*()_={LO[}]'<>/"};
 
 
 bool Encryptor::charInRange(const char c) {
@@ -22,8 +22,6 @@ bool Encryptor::charInRange(const char c) {
     return false;
 }
 
-// password12345
-//
 std::string Encryptor::encrypt(const std::string &message) {
     std::string encryptedMessage = message;
     for (int i = 0; i < encryptedMessage.length(); ++i) {
