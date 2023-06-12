@@ -1,2 +1,4 @@
 06/04/2023 15:36:56 - Failed! Path: ../passwords.dat
 06/04/2023 15:37:04 - Success! Path: ../passwords.dat
+06/12/2023 22:06:44 - Failed! Path: ../data.dat
+06/12/2023 22:07:11 - Success! Path: ../data.dat

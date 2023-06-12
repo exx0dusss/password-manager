@@ -13,16 +13,13 @@ Console::Console() {
     bool exit = false;
     SetConsoleOutputCP(CP_UTF8);
     fmt::print("\n--- Welcome to Password Manager! ---\n");
-
     do {
-
         fmt::print("\nSelect option:\n");
         fmt::print("1. Open database\n");
         fmt::print("2. Create database\n");
         fmt::print("3. Exit\n\n");
         std::string option;
-        std::cin >> option;
-        std::cin.ignore();
+        std::getline(std::cin, option);
         switch (option[0]) {
             case '1':
                 if (openDatabase()) {
@@ -100,9 +97,9 @@ void Console::createDatabase() {
     std::ifstream inputFile(filePath, std::ios::app);
     if (!is_empty(inputFile)) {
         fmt::print("\nThe file may contain a database already!\n Override? (1/2)\n");
-        int choice;
-        std::cin >> choice;
-        if (choice == 2) {
+        std::string choice;
+        std::getline(std::cin, choice);
+        if (choice[0] == '2') {
             return;
         }
     }
@@ -131,8 +128,7 @@ void Console::printActions() {
         fmt::print("8. Delete Category\n");
         fmt::print("9. Back\n\n");
         std::string option;
-        std::cin >> option;
-        std::cin.ignore();
+        std::getline(std::cin, option);
         switch (option[0]) {
             case '1':
                 printPasswords();
@@ -176,21 +172,19 @@ std::string Console::createPassword() {
         fmt::print("\nChoose an option:\n");
         fmt::print("1. Generate a password\n");
         fmt::print("2. Enter a password manually\n");
-        int choice;
-        std::cin >> choice;
-        std::cin.ignore();
-        if (choice == 1) {
+        std::string choice;
+        std::getline(std::cin, choice);
+        if (choice[0] == '1') {
             password = generatePassword();
             fmt::print("\nGenerated password: {}\n", password);
-        } else if (choice == 2) {
+        } else if (choice[0] == '2') {
             fmt::print("\nEnter a new password:\n");
             std::getline(std::cin, password);
             if (!isStrongPassword(password)) {
                 fmt::print("\nPassword is weak!\n");
                 fmt::print("Would you like to try again? (1/2)\n");
-                std::cin >> choice;
-                std::cin.ignore();
-                if (choice == 1) {
+                std::getline(std::cin, choice);
+                if (choice[0] == '1') {
                     continue;
                 }
             }
@@ -204,9 +198,8 @@ std::string Console::createPassword() {
         if (findUsedPassword(password)) {
             fmt::print("\nThis password is already used.\n");
             fmt::print("Would you like to try again? (1/2)\n");
-            std::cin >> choice;
-            std::cin.ignore();
-            if (choice == 1) {
+            std::getline(std::cin, choice);
+            if (choice[0] == 1) {
                 continue;
             }
         }
@@ -233,8 +226,7 @@ void Console::addPassword() {
             passwordCategories += (category + ',');
             std::string option;
             fmt::print("\nAdd one more category? (1/2)\n");
-            std::cin >> option;
-            std::cin.ignore();
+            std::getline(std::cin, option);
             if (option[0] == '2')
                 break;
             continue;
@@ -242,10 +234,10 @@ void Console::addPassword() {
         }
         fmt::print("\nCategory missing!\n");
         fmt::print("\nCreate new? (1/2)\n");
-        std::string option1;
-        std::cin >> option1;
-        std::cin.ignore();
-        if (option1[0] == '2') {
+        std::string option;
+        std::getline(std::cin, option);
+
+        if (option[0] == '2') {
             fmt::print("\nPassword wasn't created!\n");
             return;
         }
@@ -452,12 +444,10 @@ void Console::searchPasswords() {
     fmt::print("4. Search by Service\n");
 
     std::string option;
-    std::cin >> option;
-    std::cin.ignore();
+    std::getline(std::cin, option);
     std::string searchValue;
     fmt::print("Enter the search value:\n");
-    std::cin >> searchValue;
-    std::cin.ignore();
+    std::getline(std::cin, searchValue);
     bool found = false;
     fmt::print("\n");
     switch (option[0]) {
@@ -569,8 +559,7 @@ void Console::sortPasswords() {
     fmt::print("4. Sort by Service\n");
 
     std::string option;
-    std::cin >> option;
-    std::cin.ignore();
+    std::getline(std::cin, option);
     std::function<bool(const Password &, const Password &)> comparator;
 
     switch (option[0]) {
