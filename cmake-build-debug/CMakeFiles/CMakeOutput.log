@@ -1,19 +1,19 @@
-The system is: Windows - 10.0.22621 - AMD64
+The system is: Darwin - 22.3.0 - arm64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/gcc.exe 
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
 Build flags: 
-Id flags:  
+Id flags: -c 
 
 The output was:
 0
 
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/a.exe"
+The C compiler identification is AppleClang, found in "/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.o"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/g++.exe 
+Compiler: /opt/homebrew/bin/g++-12 
 Build flags: 
 Id flags:  
 
@@ -21,442 +21,329 @@ The output was:
 0
 
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/a.exe"
+The CXX compiler identification is GNU, found in "/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/3.24.2/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7c3bn8
+Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_13fa7 && [1/2] Building C object CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj
-Using built-in specs.
-COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\gcc.exe
-Target: x86_64-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/'
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_13fa7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Timur\AppData\Local\Temp\ccBT9vct.s
-GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"
-ignoring nonexistent directory "/win/include"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../include"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
-ignoring nonexistent directory "/mingw/include"
-#include "..." search starts here:
-#include <...> search starts here:
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include
-End of search list.
-GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 23424b72d090e8b977a96775bde79257
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/'
- as -v -o CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj C:\Users\Timur\AppData\Local\Temp\ccBT9vct.s
-GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
-COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/
-LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.'
-[2/2] Linking C executable cmTC_13fa7.exe
-Using built-in specs.
-COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\gcc.exe
-COLLECT_LTO_WRAPPER=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
-Target: x86_64-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/
-LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13fa7.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13fa7.'
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_13fa7.exe E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_13fa7.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13fa7.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13fa7.'
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_40d14/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_40d14.dir/build.make CMakeFiles/cmTC_40d14.dir/build
+Building C object CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics   -v -Wl,-v -MD -MT CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c"
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.3.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+clang: [0;1;35mwarning: [0m[1m-Wl,-v: 'linker' input unused [-Wunused-command-line-argument][0m
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -fcolor-diagnostics -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -x c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c"
+clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.3.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include
+ /Library/Developer/CommandLineTools/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_40d14
+"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_40d14.dir/link.txt --verbose=1
+/Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -o cmTC_40d14 
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.3.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.2.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o cmTC_40d14 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-857.1
+BUILD 16:59:58 Feb 24 2023
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
 
 
 
-Parsed C implicit include dir info from above output: rv=done
+Parsed C implicit include dir info from above output: rv=loading
   found start of include info
-  found start of implicit include info
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
-  end of search list found
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/include]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/include]
-  implicit include dirs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/include;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/include]
+  warn: unable to parse implicit include dirs!
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-7c3bn8]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_13fa7 && [1/2] Building C object CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\gcc.exe]
-  ignore line: [Target: x86_64-w64-mingw32]
-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_40d14/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_40d14.dir/build.make CMakeFiles/cmTC_40d14.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics   -v -Wl -v -MD -MT CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c"]
+  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+  ignore line: [Target: arm64-apple-darwin22.3.0]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/']
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_13fa7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Timur\AppData\Local\Temp\ccBT9vct.s]
-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"]
-  ignore line: [ignoring nonexistent directory "/win/include"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../include"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"]
-  ignore line: [ignoring nonexistent directory "/mingw/include"]
-  ignore line: [#include "..." search starts here:]
-  ignore line: [#include <...> search starts here:]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
-  ignore line: [End of search list.]
-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 23424b72d090e8b977a96775bde79257]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/']
-  ignore line: [ as -v -o CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj C:\Users\Timur\AppData\Local\Temp\ccBT9vct.s]
-  ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
-  ignore line: [COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/]
-  ignore line: [LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.']
-  ignore line: [[2/2] Linking C executable cmTC_13fa7.exe]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\gcc.exe]
-  ignore line: [COLLECT_LTO_WRAPPER=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
-  ignore line: [Target: x86_64-w64-mingw32]
-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
-  ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/]
-  ignore line: [LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_13fa7.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_13fa7.']
-  link line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_13fa7.exe E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_13fa7.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
-    arg [-m] ==> ignore
-    arg [i386pep] ==> ignore
-    arg [-Bdynamic] ==> search dynamic
-    arg [-o] ==> ignore
-    arg [cmTC_13fa7.exe] ==> ignore
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
-    arg [CMakeFiles/cmTC_13fa7.dir/CMakeCCompilerABI.c.obj] ==> ignore
-    arg [--out-implib] ==> ignore
-    arg [libcmTC_13fa7.dll.a] ==> ignore
-    arg [--major-image-version] ==> ignore
-    arg [0] ==> ignore
-    arg [--minor-image-version] ==> ignore
-    arg [0] ==> ignore
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lgcc_eh] ==> lib [gcc_eh]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [-lpthread] ==> lib [pthread]
-    arg [-ladvapi32] ==> lib [advapi32]
-    arg [-lshell32] ==> lib [shell32]
-    arg [-luser32] ==> lib [user32]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [-liconv] ==> lib [iconv]
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lgcc_eh] ==> lib [gcc_eh]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  remove lib [gcc_eh]
-  remove lib [msvcrt]
-  remove lib [gcc_eh]
-  remove lib [msvcrt]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
-  implicit objs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  implicit dirs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  implicit fwks: []
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [clang: [0;1;35mwarning: [0m[1m-Wl,-v: 'linker' input unused [-Wunused-command-line-argument][0m; "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.2.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -fcolor-diagnostics -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -x c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c";clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.3.0;ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include";ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/Library/Frameworks";#include "..." search starts here:;#include <...> search starts here:; /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include; /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include; /Library/Developer/CommandLineTools/usr/include; /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory);End of search list.;Linking C executable cmTC_40d14;"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_40d14.dir/link.txt --verbose=1;/Library/Developer/CommandLineTools/usr/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -o cmTC_40d14 ;Apple clang version 14.0.3 (clang-1403.0.22.14.1);Target: arm64-apple-darwin22.3.0;Thread model: posix;InstalledDir: /Library/Developer/CommandLineTools/usr/bin; "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.2.0 13.3 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o cmTC_40d14 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_40d14.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a;@(#)PROGRAM:ld  PROJECT:ld64-857.1;BUILD 16:59:58 Feb 24 2023;configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em;Library search paths:;	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib;Framework search paths:;	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/;;]
+  Library search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nkns7a
+Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_4c0d4 && [1/2] Building CXX object CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj
-Using built-in specs.
-COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe
-Target: x86_64-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/'
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c0d4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Timur\AppData\Local\Temp\ccICZA3w.s
-GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"
-ignoring nonexistent directory "/win/include"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../include"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"
-ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
-ignoring nonexistent directory "/mingw/include"
-#include "..." search starts here:
-#include <...> search starts here:
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include
-End of search list.
-GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/'
- as -v -o CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\Timur\AppData\Local\Temp\ccICZA3w.s
-GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
-COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/
-LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.'
-[2/2] Linking CXX executable cmTC_4c0d4.exe
-Using built-in specs.
-COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe
-COLLECT_LTO_WRAPPER=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
-Target: x86_64-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-Thread model: posix
-Supported LTO compression algorithms: zlib
-gcc version 11.2.0 (GCC) 
-COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/
-LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0d4.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0d4.'
- E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_4c0d4.exe E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_4c0d4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0d4.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0d4.'
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_0c135/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0c135.dir/build.make CMakeFiles/cmTC_0c135.dir/build
+Building CXX object CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o
+/opt/homebrew/bin/g++-12   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fdiagnostics-color=always   -v -Wl,-v -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp"
+Using built-in specs.
+COLLECT_GCC=/opt/homebrew/bin/g++-12
+Target: aarch64-apple-darwin22
+Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-12 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 12.2.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin22 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 12.2.0 (Homebrew GCC 12.2.0) 
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2' '-asm_macosx_version_min=13.2' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/'
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/cc1plus -quiet -v -iprefix /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/ -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk /Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_0c135.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=13.2 -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s
+GNU C++17 (Homebrew GCC 12.2.0) version 12.2.0 (aarch64-apple-darwin22)
+	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0-p13, MPC version 1.2.1, isl version isl-0.25-GMP
+
+warning: MPFR header version 4.1.0-p13 differs from library version 4.2.0.
+warning: MPC header version 1.2.1 differs from library version 1.3.1.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../aarch64-apple-darwin22/include"
+ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"
+ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"
+ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"
+ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include"
+ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"
+ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../aarch64-apple-darwin22/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks
+End of search list.
+GNU C++17 (Homebrew GCC 12.2.0) version 12.2.0 (aarch64-apple-darwin22)
+	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0-p13, MPC version 1.2.1, isl version isl-0.25-GMP
+
+warning: MPFR header version 4.1.0-p13 differs from library version 4.2.0.
+warning: MPC header version 1.2.1 differs from library version 1.3.1.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 92be565a621eebe8268e8cf75aa62159
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/'
+ as -arch arm64 -v -mmacosx-version-min=13.2 -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.3.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple arm64-apple-macosx13.2.0 -filetype obj -main-file-name cckUbTfz.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -dwarf-debug-producer "Apple clang version 14.0.3 (clang-1403.0.22.14.1)" -dwarf-version=4 -mrelocation-model pic --mrelax-relocations -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s
+COMPILER_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../
+COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_0c135
+"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_0c135.dir/link.txt --verbose=1
+/opt/homebrew/bin/g++-12  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0c135 
+Using built-in specs.
+COLLECT_GCC=/opt/homebrew/bin/g++-12
+COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/lto-wrapper
+Target: aarch64-apple-darwin22
+Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-12 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 12.2.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin22 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 12.2.0 (Homebrew GCC 12.2.0) 
+COMPILER_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/
+LIBRARY_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../
+COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_0c135' '-mmacosx-version-min=13.2' '-asm_macosx_version_min=13.2' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_0c135.'
+ /opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -macosx_version_min 13.2 -o cmTC_0c135 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12 -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current
+collect2 version 12.2.0
+/usr/bin/ld -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -macosx_version_min 13.2 -o cmTC_0c135 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12 -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current
+@(#)PROGRAM:ld  PROJECT:ld64-857.1
+BUILD 16:59:58 Feb 24 2023
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12
+	/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc
+	/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-    add: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
+    add: [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12]
+    add: [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22]
+    add: [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward]
+    add: [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include]
+    add: [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
   end of search list found
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/include]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-  collapse include dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/include]
-  implicit include dirs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/include;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/include]
+  collapse include dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12] ==> [/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12]
+  collapse include dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22] ==> [/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin22]
+  collapse include dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward] ==> [/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/backward]
+  collapse include dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include]
+  collapse include dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+  implicit include dirs: [/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12;/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin22;/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/backward;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-nkns7a]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_4c0d4 && [1/2] Building CXX object CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_0c135/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0c135.dir/build.make CMakeFiles/cmTC_0c135.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/homebrew/bin/g++-12   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fdiagnostics-color=always   -v -Wl -v -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -c "/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp"]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe]
-  ignore line: [Target: x86_64-w64-mingw32]
-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+  ignore line: [COLLECT_GCC=/opt/homebrew/bin/g++-12]
+  ignore line: [Target: aarch64-apple-darwin22]
+  ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran --program-suffix=-12 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 12.2.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin22 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/']
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4c0d4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Timur\AppData\Local\Temp\ccICZA3w.s]
-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 12.2.0 (Homebrew GCC 12.2.0) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2' '-asm_macosx_version_min=13.2' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/']
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/cc1plus -quiet -v -iprefix /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/ -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk /Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_0c135.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=13.2 -mlittle-endian -mabi=lp64 -version -fdiagnostics-color=always -o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s]
+  ignore line: [GNU C++17 (Homebrew GCC 12.2.0) version 12.2.0 (aarch64-apple-darwin22)]
+  ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0-p13  MPC version 1.2.1  isl version isl-0.25-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0-p13 differs from library version 4.2.0.]
+  ignore line: [warning: MPC header version 1.2.1 differs from library version 1.3.1.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"]
-  ignore line: [ignoring nonexistent directory "/win/include"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../include"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"]
-  ignore line: [ignoring duplicate directory "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"]
-  ignore line: [ignoring nonexistent directory "/mingw/include"]
+  ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../aarch64-apple-darwin22/include"]
+  ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"]
+  ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"]
+  ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"]
+  ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/local/include"]
+  ignore line: [ignoring duplicate directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/../../../../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../aarch64-apple-darwin22/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
-  ignore line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12]
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22]
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward]
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include]
+  ignore line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
   ignore line: [End of search list.]
-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GNU C++17 (Homebrew GCC 12.2.0) version 12.2.0 (aarch64-apple-darwin22)]
+  ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0-p13  MPC version 1.2.1  isl version isl-0.25-GMP]
+  ignore line: []
+  ignore line: [warning: MPFR header version 4.1.0-p13 differs from library version 4.2.0.]
+  ignore line: [warning: MPC header version 1.2.1 differs from library version 1.3.1.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/']
-  ignore line: [ as -v -o CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\Timur\AppData\Local\Temp\ccICZA3w.s]
-  ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
-  ignore line: [COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/]
-  ignore line: [LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [[2/2] Linking CXX executable cmTC_4c0d4.exe]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\mingw\bin\g++.exe]
-  ignore line: [COLLECT_LTO_WRAPPER=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
-  ignore line: [Target: x86_64-w64-mingw32]
-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+  ignore line: [Compiler executable checksum: 92be565a621eebe8268e8cf75aa62159]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/']
+  ignore line: [ as -arch arm64 -v -mmacosx-version-min=13.2 -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s]
+  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
+  ignore line: [Target: arm64-apple-darwin22.3.0]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib]
-  ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COMPILER_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/]
-  ignore line: [LIBRARY_PATH=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4c0d4.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4c0d4.']
-  link line: [ E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_4c0d4.exe E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_4c0d4.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
-    arg [-m] ==> ignore
-    arg [i386pep] ==> ignore
-    arg [-Bdynamic] ==> search dynamic
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple arm64-apple-macosx13.2.0 -filetype obj -main-file-name cckUbTfz.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp -dwarf-debug-producer "Apple clang version 14.0.3 (clang-1403.0.22.14.1)" -dwarf-version=4 -mrelocation-model pic --mrelax-relocations -mllvm -disable-aligned-alloc-awareness=1 -o CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o /var/folders/0_/jny2kr857bq8n26_r8w9cjbw0000gn/T//cckUbTfz.s]
+  ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mmacosx-version-min=13.2'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_0c135]
+  ignore line: ["/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_0c135.dir/link.txt --verbose=1]
+  ignore line: [/opt/homebrew/bin/g++-12  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0c135 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/homebrew/bin/g++-12]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/lto-wrapper]
+  ignore line: [Target: aarch64-apple-darwin22]
+  ignore line: [Configured with: ../configure --prefix=/opt/homebrew/opt/gcc --libdir=/opt/homebrew/opt/gcc/lib/gcc/current --disable-nls --enable-checking=release --with-gcc-major-version-only --enable-languages=c c++ objc obj-c++ fortran --program-suffix=-12 --with-gmp=/opt/homebrew/opt/gmp --with-mpfr=/opt/homebrew/opt/mpfr --with-mpc=/opt/homebrew/opt/libmpc --with-isl=/opt/homebrew/opt/isl --with-zstd=/opt/homebrew/opt/zstd --with-pkgversion='Homebrew GCC 12.2.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --with-system-zlib --build=aarch64-apple-darwin22 --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 12.2.0 (Homebrew GCC 12.2.0) ]
+  ignore line: [COMPILER_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/]
+  ignore line: [LIBRARY_PATH=/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/:/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_0c135' '-mmacosx-version-min=13.2' '-asm_macosx_version_min=13.2' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_0c135.']
+  link line: [ /opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -macosx_version_min 13.2 -o cmTC_0c135 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12 -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc -L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12 -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc -rpath /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current]
+    arg [/opt/homebrew/Cellar/gcc/12.2.0/bin/../libexec/gcc/aarch64-apple-darwin22/12/collect2] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [arm64] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [13.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_4c0d4.exe] ==> ignore
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
-    arg [-LE:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
-    arg [CMakeFiles/cmTC_4c0d4.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
-    arg [--out-implib] ==> ignore
-    arg [libcmTC_4c0d4.dll.a] ==> ignore
-    arg [--major-image-version] ==> ignore
-    arg [0] ==> ignore
-    arg [--minor-image-version] ==> ignore
-    arg [0] ==> ignore
+    arg [cmTC_0c135] ==> ignore
+    arg [-L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12] ==> dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12]
+    arg [-L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc] ==> dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc]
+    arg [-L/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../..] ==> dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../..]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_0c135.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lemutls_w] ==> lib [emutls_w]
     arg [-lgcc] ==> lib [gcc]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [-lpthread] ==> lib [pthread]
-    arg [-ladvapi32] ==> lib [advapi32]
-    arg [-lshell32] ==> lib [shell32]
-    arg [-luser32] ==> lib [user32]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [-liconv] ==> lib [iconv]
-    arg [-lmingw32] ==> lib [mingw32]
-    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lSystem] ==> lib [System]
     arg [-lgcc] ==> lib [gcc]
-    arg [-lmoldname] ==> lib [moldname]
-    arg [-lmingwex] ==> lib [mingwex]
-    arg [-lmsvcrt] ==> lib [msvcrt]
-    arg [-lkernel32] ==> lib [kernel32]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
-    arg [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  remove lib [msvcrt]
-  remove lib [msvcrt]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
-  collapse obj [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib]
-  collapse library dir [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
-  implicit objs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  implicit dirs: [E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib/gcc;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/x86_64-w64-mingw32/lib;E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/lib]
-  implicit fwks: []
+    arg [-no_compact_unwind] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [@loader_path] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current] ==> ignore
+  Library search paths: [;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../..] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc]
+  collapse library dir [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current] ==> [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+  implicit libs: [stdc++;emutls_w;gcc;gcc]
+  implicit objs: []
+  implicit dirs: [/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc;/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current;/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
 
 
 Performing C++ SOURCE FILE Test has_std_20_flag succeeded with the following output:
-Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-q5oun7
+Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_09ba7 && [1/2] Building CXX object CMakeFiles/cmTC_09ba7.dir/src.cxx.obj
-[2/2] Linking CXX executable cmTC_09ba7.exe
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_81c56/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_81c56.dir/build.make CMakeFiles/cmTC_81c56.dir/build
+Building CXX object CMakeFiles/cmTC_81c56.dir/src.cxx.o
+/opt/homebrew/bin/g++-12 -Dhas_std_20_flag  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fdiagnostics-color=always   -std=c++20 -std=gnu++20 -o CMakeFiles/cmTC_81c56.dir/src.cxx.o -c /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_81c56
+"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_81c56.dir/link.txt --verbose=1
+/opt/homebrew/bin/g++-12  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_81c56.dir/src.cxx.o -o cmTC_81c56 
 
 
 Source file was:
 int main() { return 0; }
-
 Performing C++ SOURCE FILE Test has_std_2a_flag succeeded with the following output:
-Change Dir: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xtisfs
+Change Dir: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe cmTC_678db && [1/2] Building CXX object CMakeFiles/cmTC_678db.dir/src.cxx.obj
-[2/2] Linking CXX executable cmTC_678db.exe
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e1fc6/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e1fc6.dir/build.make CMakeFiles/cmTC_e1fc6.dir/build
+Building CXX object CMakeFiles/cmTC_e1fc6.dir/src.cxx.o
+/opt/homebrew/bin/g++-12 -Dhas_std_2a_flag  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fdiagnostics-color=always   -std=c++2a -std=gnu++20 -o CMakeFiles/cmTC_e1fc6.dir/src.cxx.o -c /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e1fc6
+"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_link_script CMakeFiles/cmTC_e1fc6.dir/link.txt --verbose=1
+/opt/homebrew/bin/g++-12  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e1fc6.dir/src.cxx.o -o cmTC_e1fc6 
 
 
 Source file was:
 int main() { return 0; }
-

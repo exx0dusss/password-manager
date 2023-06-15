@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Timur/Documents/GitHub/Password_Manager
+# Install script for directory: /Users/tymur/Documents/GitHub/Password_Manager
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Password_Manager")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-build/cmake_install.cmake")
+  include("/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/_deps/fmt-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

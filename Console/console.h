@@ -11,7 +11,7 @@ public:
     Console();
 
 private:
-    char splitter = (char) (0x0 + 685); ///< character that splits written data to a file.
+    char splitter = (char) (0x0 + 685); ///< character that splits data written to a file.
 
     std::string filePath; ///< path of a file containing database.
     std::string categories; ///< encrypted string of categories.

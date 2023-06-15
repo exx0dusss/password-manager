@@ -2,3 +2,9 @@
 06/04/2023 15:37:04 - Success! Path: ../passwords.dat
 06/12/2023 22:06:44 - Failed! Path: ../data.dat
 06/12/2023 22:07:11 - Success! Path: ../data.dat
+06/13/2023 07:17:17 - Success! Path: ../data.dat
+06/13/2023 08:36:42 - Success! Path: ../database.dat
+06/13/2023 08:48:47 - Success! Path: ../newdb.dat
+06/13/2023 08:50:57 - Failed! Path: ../database.dat
+06/13/2023 08:51:25 - Failed! Path: ../newdb.dat
+06/13/2023 08:52:26 - Success! Path: ../mydatabase.dat

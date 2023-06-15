@@ -22,15 +22,16 @@ bool Encryptor::charInRange(const char c) {
     return false;
 }
 
+// helllllo
 std::string Encryptor::encrypt(const std::string &message) {
     std::string encryptedMessage = message;
     for (int i = 0; i < encryptedMessage.length(); ++i) {
         if (i + 1 < encryptedMessage.length() && encryptedMessage[i + 1] == encryptedMessage[i]) {
             for (int j = i + 1; j < encryptedMessage.length(); ++j) {
                 if (encryptedMessage[j] == encryptedMessage[i]) {
-                    std::random_device rd;
-                    std::mt19937 gen(rd());
-                    std::uniform_int_distribution<> dist(160, 255);
+                    std::random_device rd; // declare a source of random numbers
+                    std::mt19937 gen(rd()); // Marsenne Twister random algorithm
+                    std::uniform_int_distribution<> dist(160, 255); // uses algorithm
                     int randomNum = dist(gen);
                     encryptedMessage[j] = (char) (0x0 + randomNum);
                 } else {

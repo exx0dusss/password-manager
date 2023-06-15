@@ -1,4 +1,4 @@
-E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/JetBrains/apps/CLion/ch-0/231.9011.31/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\Timur\Documents\GitHub\Password_Manager -B C:\Users\Timur\Documents\GitHub\Password_Manager\cmake-build-debug
+"/Users/tymur/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8836.42/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-12 -G "CodeBlocks - Unix Makefiles" -S /Users/tymur/Documents/GitHub/Password_Manager -B /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug
 -- Module support is disabled.
 -- Version: 9.1.0
 -- Build type: Debug
@@ -6,4 +6,4 @@ E:\JetBrains\apps\CLion\ch-0\231.9011.31\bin\cmake\win\x64\bin\cmake.exe -DCMAKE
 -- Required features: cxx_variadic_templates
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Timur/Documents/GitHub/Password_Manager/cmake-build-debug
+-- Build files have been written to: /Users/tymur/Documents/GitHub/Password_Manager/cmake-build-debug

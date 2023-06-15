@@ -1,17 +1,15 @@
 #include "console.h"
 #include <iostream>
-#include <windows.h>
 #include <ctime>
 #include <filesystem>
 #include <fmt/core.h>
-#include <fmt/format.h>
 #include "../Encryptor/encryptor.h"
-#include <sstream>
 #include <random>
+#include <algorithm>
+#include <functional>
 
 Console::Console() {
     bool exit = false;
-    SetConsoleOutputCP(CP_UTF8);
     fmt::print("\n--- Welcome to Password Manager! ---\n");
     do {
         fmt::print("\nSelect option:\n");
@@ -51,8 +49,10 @@ bool Console::openDatabase() {
     std::cin.ignore();
     std::string filePassword = getFilePassword();
     if (filePassword.empty()) {
+        std::cout << "\nFile is empty!\n";
         return false;
     }
+
     std::string password;
     fmt::print("\nEnter the file password:\n");
     std::cin >> password;
@@ -199,7 +199,7 @@ std::string Console::createPassword() {
             fmt::print("\nThis password is already used.\n");
             fmt::print("Would you like to try again? (1/2)\n");
             std::getline(std::cin, choice);
-            if (choice[0] == 1) {
+            if (choice[0] == '1') {
                 continue;
             }
         }
@@ -482,7 +482,6 @@ void Console::searchPasswords() {
                 if (login == searchValue) {
                     printPassword(password);
                     fmt::print("\n");
-
                     found = true;
                 }
             }
@@ -519,23 +518,15 @@ void Console::printPasswords() {
 }
 
 std::string Console::getFilePassword() const {
-    if (std::filesystem::exists(filePath)) {
-        std::ifstream inputFile(filePath, std::ios::app);
+    std::ifstream file(filePath);
+    std::string line;
 
-        if (!inputFile) {
-            fmt::print("\nFailed to open output file!\n");
-            return "";
-        }
-
-        std::string line;
-        std::getline(inputFile, line);
-        return line;
-
-
-    } else {
-        fmt::print("\nFile doesn't exist!\n");
-        return "";
+    if (file.is_open()) {
+        std::getline(file, line);
+        file.close();
     }
+
+    return line;
 
 
 }
@@ -730,7 +721,11 @@ void Console::deleteCategory() {
     }
 }
 
-std::vector<std::string> Console::splitString(const std::string &str, char delimiter) {
+#include <sstream>
+#include <vector>
+#include <string>
+
+std::vector<std::string> Console::splitString(const std::string& str, char delimiter) {
     std::vector<std::string> tokens;
     std::string token;
     std::istringstream tokenStream(str);
@@ -741,6 +736,7 @@ std::vector<std::string> Console::splitString(const std::string &str, char delim
 
     return tokens;
 }
+
 
 
 bool Console::findCategory(const std::string &sourceCategories, const std::string &categoryToFind) {
@@ -757,7 +753,7 @@ bool Console::findCategory(const std::string &sourceCategories, const std::strin
 
 
 std::vector<Password> Console::getPasswords() {
-    if (std::filesystem::exists(this->filePath)) {
+    if (std::filesystem::exists(filePath)) {
         std::ifstream inputFile(filePath, std::ios::app);
 
         if (!inputFile) {
